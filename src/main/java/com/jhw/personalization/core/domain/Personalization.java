@@ -5,10 +5,9 @@
  */
 package com.jhw.personalization.core.domain;
 
-import com.jhw.swing.material.standars.MaterialColors;
-import com.jhw.swing.material.standars.MaterialIcons;
-import com.jhw.swing.util.Utils;
-import com.jhw.swing.util.icons.icon_ttf.IconTTF;
+import com.jhw.swing.material.standards.MaterialColors;
+import com.jhw.swing.material.standards.MaterialIcons;
+import com.jhw.swing.utils.icons.IconTTF;
 import com.jhw.utils.jackson.JACKSON;
 import java.util.HashMap;
 
@@ -55,7 +54,8 @@ public class Personalization extends HashMap<String, Object> {
 
     //money
     public static final String KEY_COLOR_MONEY_POSITIVE = "swing_personalization.key.color.money_positive";
-    public static final Object VALUE_COLOR_MONEY_POSITIVE = Utils.darken(MaterialColors.GREEN_900);
+    public static final Object VALUE_COLOR_MONEY_POSITIVE = MaterialColors.GREEN_900;
+
     public static final String KEY_COLOR_BUTTON_NEGATIVE = "swing_personalization.key.color.money_negative";
     public static final Object VALUE_COLOR_BUTTON_NEGATIVE = MaterialColors.REDA_700;
 
