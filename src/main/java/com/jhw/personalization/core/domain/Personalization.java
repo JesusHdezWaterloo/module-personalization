@@ -56,8 +56,8 @@ public class Personalization extends HashMap<String, Object> {
     public static final String KEY_COLOR_MONEY_POSITIVE = "swing_personalization.key.color.money_positive";
     public static final Object VALUE_COLOR_MONEY_POSITIVE = MaterialColors.GREEN_900;
 
-    public static final String KEY_COLOR_BUTTON_NEGATIVE = "swing_personalization.key.color.money_negative";
-    public static final Object VALUE_COLOR_BUTTON_NEGATIVE = MaterialColors.REDA_700;
+    public static final String KEY_COLOR_MONEY_NEGATIVE = "swing_personalization.key.color.money_negative";
+    public static final Object VALUE_COLOR_MONEY_NEGATIVE = MaterialColors.REDA_700;
 
     //text fields
     public static final String KEY_COLOR_ACCENT = "swing_personalization.key.color.accent";
@@ -115,7 +115,7 @@ public class Personalization extends HashMap<String, Object> {
         super.put(KEY_ICON_BUTTON_VIEW, VALUE_ICON_BUTTON_VIEW);
 
         super.put(KEY_COLOR_MONEY_POSITIVE, VALUE_COLOR_MONEY_POSITIVE);
-        super.put(KEY_COLOR_BUTTON_NEGATIVE, VALUE_COLOR_BUTTON_NEGATIVE);
+        super.put(KEY_COLOR_MONEY_NEGATIVE, VALUE_COLOR_MONEY_NEGATIVE);
 
         super.put(KEY_COLOR_ACCENT, VALUE_COLOR_ACCENT);
         super.put(KEY_COLOR_WRONG, VALUE_COLOR_WRONG);
