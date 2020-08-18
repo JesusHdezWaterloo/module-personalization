@@ -8,12 +8,13 @@ import com.jhw.personalization.core.domain.Personalization;
 import javax.inject.Inject;
 import com.jhw.utils.jackson.JACKSONRepoGeneral;
 import com.jhw.personalization.core.repo_def.PersonalizationRepo;
-import com.jhw.swing.util.icons.icon_ttf.IconTTF;
-import com.jhw.swing.util.icons.icon_ttf.IconTTFJsonDeserializer;
-import com.jhw.swing.util.icons.icon_ttf.IconTTFJsonSerializer;
+import com.jhw.personalization.repo.jackson.color.ColorJsonDeserializer;
+import com.jhw.personalization.repo.jackson.color.ColorJsonSerializer;
+import com.jhw.personalization.repo.jackson.icon_ttf.IconTTFJsonDeserializer;
+import com.jhw.personalization.repo.jackson.icon_ttf.IconTTFJsonSerializer;
+import com.jhw.swing.utils.icons.IconTTF;
 import com.jhw.utils.jackson.JACKSON;
 import java.awt.Color;
-import java.util.LinkedHashMap;
 
 /**
  * Implementacion de la Interfaz {@code LicenceRepo} para manejar el
@@ -29,6 +30,11 @@ public class PersonalizationRepoImpl extends JACKSONRepoGeneral<Personalization>
     @Inject
     public PersonalizationRepoImpl() {
         super("personalization.json", Personalization.class);
+
+        SimpleModule colorModule = new SimpleModule("Color Module");
+        colorModule.addSerializer(Color.class, new ColorJsonSerializer());
+        colorModule.addDeserializer(Color.class, new ColorJsonDeserializer());
+        JACKSON.registerModule(colorModule);
 
         SimpleModule iconTTF = new SimpleModule("IconTTF Module");
         iconTTF.addSerializer(IconTTF.class, new IconTTFJsonSerializer());

@@ -9,8 +9,8 @@ import com.jhw.personalization.core.domain.Personalization;
 import com.jhw.personalization.core.module.PersonalizationCoreModule;
 import com.jhw.personalization.core.usecase_def.PersonalizableUseCase;
 import com.jhw.personalization.repo.module.PersonalizationRepoModule;
-import com.jhw.swing.util.icons.DerivableIcon;
-import com.jhw.swing.util.icons.icon_ttf.IconTTF;
+import com.jhw.swing.utils.icons.DerivableIcon;
+import com.jhw.swing.utils.icons.IconTTF;
 import java.awt.Color;
 
 /**
