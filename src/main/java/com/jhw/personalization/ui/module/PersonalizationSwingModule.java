@@ -11,11 +11,10 @@ public class PersonalizationSwingModule implements AbstractSwingMainModule {
 
     private final PersonalizationModuleNavigator navigator = new PersonalizationModuleNavigator();
 
-    public PersonalizationSwingModule() {
-        init();
+    private PersonalizationSwingModule() {
     }
 
-    private void init() {
+    public static PersonalizationSwingModule init() {
         System.out.println("Cargando Personalizaciones Visuales");
         try {
             PersonalizationResourceService.init();
@@ -23,6 +22,7 @@ public class PersonalizationSwingModule implements AbstractSwingMainModule {
             ExceptionHandler.handleException(ex);
         }
         PersonalizationHandler.INSTANCE();//load
+        return new PersonalizationSwingModule();
     }
 
     @Override
