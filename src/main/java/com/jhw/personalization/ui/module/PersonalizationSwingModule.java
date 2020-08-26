@@ -34,4 +34,7 @@ public class PersonalizationSwingModule implements AbstractSwingMainModule {
         navigator.navigateTo(string, o);
     }
 
+    @Override
+    public void closeModule() {
+    }
 }
