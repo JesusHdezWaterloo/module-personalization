@@ -1,9 +1,10 @@
 rootProject.name = 'Personalization'
 
-include ':utils', ':clean-core', ':clean-swing', ':derivable-icons', ':material-standards'
-
+include 'utils', 'clean-core', 'clean-swing'
 project(':utils').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Utils" as File
 project(':clean-core').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\CleanCoreFull" as File
 project(':clean-swing').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\CleanSwing" as File
+
+include 'derivable-icons', 'material-standards'
 project(':derivable-icons').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Material\\Derivable Icons" as File
 project(':material-standards').projectDir = "E:\\Trabajos\\Projects\\GIT Projects Gradle\\Material\\Standards" as File

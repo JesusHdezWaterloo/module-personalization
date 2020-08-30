@@ -5,6 +5,7 @@
  */
 package com.jhw.personalization.services;
 
+import com.clean.core.app.services.ExceptionHandler;
 import com.jhw.personalization.core.domain.Personalization;
 import com.jhw.personalization.core.module.PersonalizationCoreModule;
 import com.jhw.personalization.core.usecase_def.PersonalizableUseCase;
@@ -12,6 +13,7 @@ import com.jhw.personalization.repo.module.PersonalizationRepoModule;
 import com.jhw.swing.utils.icons.DerivableIcon;
 import com.jhw.swing.utils.icons.IconTTF;
 import java.awt.Color;
+import java.net.MalformedURLException;
 
 /**
  *
@@ -25,6 +27,12 @@ public class PersonalizationHandler {
         try {
             PersonalizationCoreModule.init(PersonalizationRepoModule.init());
             personalization = PersonalizationCoreModule.getInstance().getImplementation(PersonalizableUseCase.class).read();
+
+            try {
+                PersonalizationResourceService.init();
+            } catch (MalformedURLException ex) {
+                ExceptionHandler.handleException(ex);
+            }
         } catch (Exception e) {
             personalization = new Personalization();
         }
@@ -56,5 +64,15 @@ public class PersonalizationHandler {
 
     public static boolean getBoolean(String key) {
         return getObject(key, boolean.class);
+    }
+
+    public static void putObject(String key, Object obj) {
+        personalization.put(key, obj);
+    }
+
+    public static void putObjectIfNotContain(String key, Object obj) {
+        if (!personalization.containsKey(key)) {
+            putObject(key, obj);
+        }
     }
 }
