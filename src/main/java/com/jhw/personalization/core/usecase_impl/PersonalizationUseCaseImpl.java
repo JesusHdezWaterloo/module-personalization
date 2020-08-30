@@ -6,11 +6,10 @@ import com.jhw.personalization.core.module.PersonalizationCoreModule;
 import javax.inject.Inject;
 import com.jhw.personalization.core.repo_def.PersonalizationRepo;
 import com.jhw.personalization.core.usecase_def.PersonalizableUseCase;
+import com.jhw.personalization.services.PersonalizationHandler;
 
 /**
- * Implementacion de la Interfaz {@code LicenceUseCase} para manejar el
- * comportamiento de las definiciones de su interfaz
- *
+ * 
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
 public class PersonalizationUseCaseImpl extends DefaultReadWriteUseCase<Personalization> implements PersonalizableUseCase {
@@ -41,6 +40,11 @@ public class PersonalizationUseCaseImpl extends DefaultReadWriteUseCase<Personal
     @Override
     public <T> T getObject(String key, Class<T> type) throws Exception {
         return super.read().getType(key, type);
+    }
+
+    @Override
+    public void autoSave() throws Exception {
+        write(PersonalizationHandler.INSTANCE());
     }
 
 }
