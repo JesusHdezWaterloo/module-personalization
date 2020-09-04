@@ -66,6 +66,10 @@ public class PersonalizationHandler {
         return getObject(key, boolean.class);
     }
 
+    public static String getString(String key) {
+        return getObject(key, String.class);
+    }
+
     public static void putObject(String key, Object obj) {
         personalization.put(key, obj);
     }
