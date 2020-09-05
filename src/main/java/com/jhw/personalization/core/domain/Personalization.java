@@ -94,6 +94,12 @@ public class Personalization extends HashMap<String, Object> {
     public static final String KEY_COLOR_WARNING = "swing_personalization.key.color.warning";
     public static final Object VALUE_COLOR_WARNING = MaterialColors.YELLOWA_700;
 
+    //tooltip
+    public static final String KEY_INT_TOOLTIP_INITIAL_DELAY = "swing_personalization.key.int.tooltip_init_delay";
+    public static final Object VALUE_INT_TOOLTIP_INITIAL_DELAY = 300;
+    public static final String KEY_INT_TOOLTIP_DISMISS_DELAY = "swing_personalization.key.int.tooltip_desmiss_delay";
+    public static final Object VALUE_INT_TOOLTIP_DISMISS_DELAY = 30 * 1000;
+
     public Personalization() {
         super.put(KEY_DO_BEEP, VALUE_DO_BEEP);
 
@@ -133,6 +139,9 @@ public class Personalization extends HashMap<String, Object> {
         super.put(KEY_COLOR_ERROR, VALUE_COLOR_ERROR);
         super.put(KEY_COLOR_INFO, VALUE_COLOR_INFO);
         super.put(KEY_COLOR_WARNING, VALUE_COLOR_WARNING);
+
+        super.put(KEY_INT_TOOLTIP_INITIAL_DELAY, VALUE_INT_TOOLTIP_INITIAL_DELAY);
+        super.put(KEY_INT_TOOLTIP_DISMISS_DELAY, VALUE_INT_TOOLTIP_DISMISS_DELAY);
 
     }
 
