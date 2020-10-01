@@ -5,6 +5,8 @@ import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.node.TextNode;
+import com.jhw.swing.material.standards.MaterialFontRoboto;
+import com.jhw.swing.material.standards.MaterialIconsFont;
 import com.jhw.swing.utils.icons.IconTTF;
 import java.io.IOException;
 
@@ -19,6 +21,10 @@ public class IconTTFJsonDeserializer extends JsonDeserializer<IconTTF> {
         TreeNode root = p.getCodec().readTree(p);
         int ch = Integer.parseInt(((TextNode) root.get("ch")).textValue());
         float size = Float.parseFloat(((TextNode) root.get("size")).textValue());
-        return new IconTTF((char) ch).deriveIcon(size);
+        if (MaterialIconsFont.ICON_FONT.canDisplay((char) ch)) {
+            return new IconTTF(MaterialIconsFont.ICON_FONT, (char) ch).deriveIcon(size);
+        } else {
+            return new IconTTF(MaterialFontRoboto.BOLD, (char) ch).deriveIcon(size);
+        }
     }
 }

@@ -21,6 +21,10 @@ public class Personalization extends HashMap<String, Object> {
     public static final String KEY_DO_BEEP = "swing_personalization.key.boolean.do_beep";
     public static final Object VALUE_DO_BEEP = true;
 
+    //system tray
+    public static final String KEY_HIDE_TO_SYSTEM_TRAY = "swing_personalization.key.boolean.hide_to_system_tray";
+    public static final Object VALUE_HIDE_TO_SYSTEM_TRAY = true;
+
     public static final String KEY_USE_ANTIALIASING = "swing_personalization.key.boolean.use_antialiasing";
     public static final Object VALUE_USE_ANTIALIASING = true;
     public static final String KEY_USE_SHADOW = "swing_personalization.key.boolean.use_shadow";
@@ -102,6 +106,7 @@ public class Personalization extends HashMap<String, Object> {
 
     public Personalization() {
         super.put(KEY_DO_BEEP, VALUE_DO_BEEP);
+        super.put(KEY_HIDE_TO_SYSTEM_TRAY, VALUE_HIDE_TO_SYSTEM_TRAY);
 
         super.put(KEY_USE_ANTIALIASING, VALUE_USE_ANTIALIASING);
         super.put(KEY_USE_SHADOW, VALUE_USE_SHADOW);
