@@ -9,7 +9,7 @@ import com.jhw.module.util.personalization.core.usecase_def.PersonalizableUseCas
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
 
 /**
- * 
+ *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
 public class PersonalizationUseCaseImpl extends DefaultReadWriteUseCase<Personalization> implements PersonalizableUseCase {
