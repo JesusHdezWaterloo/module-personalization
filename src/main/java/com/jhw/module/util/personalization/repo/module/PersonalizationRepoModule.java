@@ -11,7 +11,7 @@ import com.google.inject.Injector;
  */
 public class PersonalizationRepoModule extends DefaultAbstractModule {
 
-    private final Injector inj = Guice.createInjector(new InjectionConfigPersonalizationRepo());
+    private final Injector inj = Guice.createInjector(new PersonalizationRepoInjectionConfig());
 
     private static PersonalizationRepoModule INSTANCE;
 
