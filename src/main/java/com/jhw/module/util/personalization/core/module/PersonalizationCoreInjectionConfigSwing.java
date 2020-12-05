@@ -9,7 +9,7 @@ import com.jhw.module.util.personalization.core.usecase_def.PersonalizableUseCas
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class InjectionConfigSwingPersonalizationCore extends AbstractModule {
+public class PersonalizationCoreInjectionConfigSwing extends AbstractModule {
 
     @Override
     protected void configure() {

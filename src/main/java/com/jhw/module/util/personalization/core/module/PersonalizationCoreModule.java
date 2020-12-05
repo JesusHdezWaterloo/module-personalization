@@ -4,6 +4,7 @@ import com.clean.core.app.modules.AbstractModule;
 import com.clean.core.app.modules.DefaultAbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.jhw.module.util.personalization.repo.module.PersonalizationRepoModule;
 
 /**
  * Modulo de licencia-core.
@@ -12,7 +13,7 @@ import com.google.inject.Injector;
  */
 public class PersonalizationCoreModule extends DefaultAbstractModule {
 
-    private final Injector inj = Guice.createInjector(new InjectionConfigSwingPersonalizationCore());
+    private final Injector inj = Guice.createInjector(new PersonalizationCoreInjectionConfigSwing());
 
     private static PersonalizationCoreModule INSTANCE;
 
@@ -23,6 +24,23 @@ public class PersonalizationCoreModule extends DefaultAbstractModule {
         return INSTANCE;
     }
 
+    public static PersonalizationCoreModule init() {
+        if (INSTANCE != null) {
+            return INSTANCE;
+        }
+        INSTANCE = new PersonalizationCoreModule();
+        INSTANCE.registerModule(PersonalizationRepoModule.init());
+        return getInstance();
+    }
+
+    /**
+     * Usar init() sin repo por parametro para usar el repo por defecto
+     *
+     * @param repoModule
+     * @return
+     * @deprecated
+     */
+    @Deprecated
     public static PersonalizationCoreModule init(AbstractModule repoModule) {
         INSTANCE = new PersonalizationCoreModule();
         INSTANCE.registerModule(repoModule);

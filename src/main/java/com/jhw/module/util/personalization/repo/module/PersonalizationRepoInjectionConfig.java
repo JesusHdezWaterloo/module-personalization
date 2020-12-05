@@ -9,7 +9,7 @@ import com.jhw.module.util.personalization.core.repo_def.PersonalizationRepo;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class InjectionConfigPersonalizationRepo extends AbstractModule {
+public class PersonalizationRepoInjectionConfig extends AbstractModule {
 
     @Override
     protected void configure() {

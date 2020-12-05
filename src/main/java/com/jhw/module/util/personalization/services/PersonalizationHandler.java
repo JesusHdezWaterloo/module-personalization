@@ -9,7 +9,6 @@ import com.clean.core.app.services.ExceptionHandler;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.core.module.PersonalizationCoreModule;
 import com.jhw.module.util.personalization.core.usecase_def.PersonalizableUseCase;
-import com.jhw.module.util.personalization.repo.module.PersonalizationRepoModule;
 import com.jhw.swing.derivable_icons.DerivableIcon;
 import com.jhw.swing.derivable_icons.IconTTF;
 import java.awt.Color;
@@ -25,7 +24,7 @@ public class PersonalizationHandler {
 
     static {
         try {
-            PersonalizationCoreModule.init(PersonalizationRepoModule.init());
+            PersonalizationCoreModule.init();
             personalization = PersonalizationCoreModule.getInstance().getImplementation(PersonalizableUseCase.class).read();
 
             try {
