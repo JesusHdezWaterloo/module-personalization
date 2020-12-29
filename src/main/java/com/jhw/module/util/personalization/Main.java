@@ -5,6 +5,9 @@
  */
 package com.jhw.module.util.personalization;
 
+import com.jhw.module.util.personalization.core.domain.Personalization;
+import com.jhw.module.util.personalization.services.PersonalizationHandler;
+import com.jhw.module.util.personalization.ui.module.PersonalizationSwingModule;
 import com.jhw.utils.jackson.JACKSON;
 import java.io.File;
 import java.util.HashMap;
@@ -19,15 +22,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        //HashMap<String, Object> map = new HashMap<>();
-        //map.put("color", MaterialColors.AMBER_600);
-        //JACKSON.write(new File("123.json"), map);
-        //HashMap read = JACKSON.read(new File("123.json"), JACKSON.getTypeFactory().constructMapType(HashMap.class, String.class, Color.class));
-        HashMap read = JACKSON.read(new File("123.json"), HashMap.class);
-        System.out.println(read.get("color"));
-
-        //Color a = MaterialColors.AMBER_600;
-        //JACKSON.write(new File("123.json"), a);
+        PersonalizationSwingModule.init();
+        PersonalizationHandler.getColor(Personalization.KEY_COLOR_SHADOW_OFF);
     }
 
 }

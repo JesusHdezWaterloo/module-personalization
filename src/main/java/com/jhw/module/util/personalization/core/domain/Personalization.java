@@ -25,10 +25,15 @@ public class Personalization extends HashMap<String, Object> {
     public static final String KEY_HIDE_TO_SYSTEM_TRAY = "swing_personalization.key.boolean.hide_to_system_tray";
     public static final Object VALUE_HIDE_TO_SYSTEM_TRAY = true;
 
+    public static final String KEY_SHOW_NOTIF_AFTER_TRAY = "swing_personalization.key.boolean.show_notification_after_tray";
+    public static final Object VALUE_SHOW_NOTIF_AFTER_TRAY = true;
+
     public static final String KEY_USE_ANTIALIASING = "swing_personalization.key.boolean.use_antialiasing";
     public static final Object VALUE_USE_ANTIALIASING = true;
     public static final String KEY_USE_SHADOW = "swing_personalization.key.boolean.use_shadow";
     public static final Object VALUE_USE_SHADOW = true;
+    public static final String KEY_COLOR_SHADOW_OFF = "swing_personalization.key.color.shadow_off";
+    public static final Object VALUE_COLOR_SHADOW_OFF = MaterialColors.GREY_400;
 
     public static final String KEY_USE_ANIMATIONS = "swing_personalization.key.boolean.use_animations";
     public static final Object VALUE_USE_ANIMATIONS = true;
@@ -107,9 +112,11 @@ public class Personalization extends HashMap<String, Object> {
     public Personalization() {
         super.put(KEY_DO_BEEP, VALUE_DO_BEEP);
         super.put(KEY_HIDE_TO_SYSTEM_TRAY, VALUE_HIDE_TO_SYSTEM_TRAY);
+        super.put(KEY_SHOW_NOTIF_AFTER_TRAY, VALUE_SHOW_NOTIF_AFTER_TRAY);
 
         super.put(KEY_USE_ANTIALIASING, VALUE_USE_ANTIALIASING);
         super.put(KEY_USE_SHADOW, VALUE_USE_SHADOW);
+        super.put(KEY_COLOR_SHADOW_OFF, VALUE_COLOR_SHADOW_OFF);
 
         super.put(KEY_USE_ANIMATIONS, VALUE_USE_ANIMATIONS);
         super.put(KEY_USE_ANIMATIONS_NOTIFICATIONS, VALUE_USE_ANIMATIONS_NOTIFICATIONS);
