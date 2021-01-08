@@ -5,4 +5,4 @@ Módulo para para almecenar todas las configuraciones visuales del UI, como colo
 ## Table of Contents
 
 ## Release Notes
-- 2.9.9.SNAPSHOT.20210108: Primera version que se empieza a documentar
+- 1.9.9.SNAPSHOT.20210108: Primera version que se empieza a documentar
