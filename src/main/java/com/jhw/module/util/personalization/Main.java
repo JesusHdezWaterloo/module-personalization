@@ -8,7 +8,7 @@ package com.jhw.module.util.personalization;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
 import com.jhw.module.util.personalization.ui.module.PersonalizationSwingModule;
-import com.jhw.utils.jackson.JACKSON;
+import com.root101.json.jackson.JACKSON;
 import java.io.File;
 import java.util.HashMap;
 

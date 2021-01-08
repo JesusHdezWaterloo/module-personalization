@@ -5,10 +5,10 @@
  */
 package com.jhw.module.util.personalization.core.domain;
 
-import com.jhw.swing.material.standards.MaterialColors;
-import com.jhw.swing.material.standards.MaterialIcons;
-import com.jhw.swing.derivable_icons.IconTTF;
-import com.jhw.utils.jackson.JACKSON;
+import com.root101.swing.material.standards.MaterialColors;
+import com.root101.swing.material.standards.MaterialIcons;
+import com.root101.swing.derivable_icons.IconTTF;
+import com.root101.json.jackson.JACKSON;
 import java.util.HashMap;
 
 /**

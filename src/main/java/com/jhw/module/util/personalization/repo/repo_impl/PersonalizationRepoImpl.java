@@ -1,19 +1,19 @@
 package com.jhw.module.util.personalization.repo.repo_impl;
 
-import com.clean.core.app.services.Notification;
-import com.clean.core.app.services.NotificationsGeneralType;
-import com.clean.core.domain.services.Resource;
+import com.root101.clean.core.app.services.NotificationHandler;
+import com.root101.clean.core.app.services.NotificationsGeneralType;
+import com.root101.clean.core.domain.services.ResourceHandler;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import javax.inject.Inject;
-import com.jhw.utils.jackson.JACKSONRepoGeneral;
+import com.root101.repo.json.JACKSONRepoGeneral;
 import com.jhw.module.util.personalization.core.repo_def.PersonalizationRepo;
 import com.jhw.module.util.personalization.repo.jackson.color.ColorJsonDeserializer;
 import com.jhw.module.util.personalization.repo.jackson.color.ColorJsonSerializer;
 import com.jhw.module.util.personalization.repo.jackson.icon_ttf.IconTTFJsonDeserializer;
 import com.jhw.module.util.personalization.repo.jackson.icon_ttf.IconTTFJsonSerializer;
-import com.jhw.swing.derivable_icons.IconTTF;
-import com.jhw.utils.jackson.JACKSON;
+import com.root101.swing.derivable_icons.IconTTF;
+import com.root101.json.jackson.JACKSON;
 import java.awt.Color;
 
 /**
@@ -45,8 +45,8 @@ public class PersonalizationRepoImpl extends JACKSONRepoGeneral<Personalization>
 
     @Override
     protected void onReadError(Exception e) {
-        Notification.showConfirmDialog(NotificationsGeneralType.CONFIRM_INFO,
-                Resource.getString("msg.swing_personalization.error.read"));
+        NotificationHandler.showConfirmDialog(NotificationsGeneralType.CONFIRM_INFO,
+                ResourceHandler.getString("msg.swing_personalization.error.read"));
     }
 
 }

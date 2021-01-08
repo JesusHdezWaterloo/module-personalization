@@ -3,7 +3,7 @@ package com.jhw.module.util.personalization.repo.jackson.icon_ttf;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import com.jhw.swing.derivable_icons.IconTTF;
+import com.root101.swing.derivable_icons.IconTTF;
 import java.io.IOException;
 
 /**

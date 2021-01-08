@@ -1,6 +1,6 @@
 package com.jhw.module.util.personalization.core.usecase_impl;
 
-import com.clean.core.app.usecase.DefaultReadWriteUseCase;
+import com.root101.clean.core.app.usecase.DefaultReadWriteUseCase;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.core.module.PersonalizationCoreModule;
 import javax.inject.Inject;

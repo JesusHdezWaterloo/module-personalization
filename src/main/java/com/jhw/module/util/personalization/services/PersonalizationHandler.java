@@ -5,12 +5,12 @@
  */
 package com.jhw.module.util.personalization.services;
 
-import com.clean.core.app.services.ExceptionHandler;
+import com.root101.clean.core.app.services.ExceptionHandler;
 import com.jhw.module.util.personalization.core.domain.Personalization;
 import com.jhw.module.util.personalization.core.module.PersonalizationCoreModule;
 import com.jhw.module.util.personalization.core.usecase_def.PersonalizableUseCase;
-import com.jhw.swing.derivable_icons.DerivableIcon;
-import com.jhw.swing.derivable_icons.IconTTF;
+import com.root101.swing.derivable_icons.DerivableIcon;
+import com.root101.swing.derivable_icons.IconTTF;
 import java.awt.Color;
 import java.net.MalformedURLException;
 

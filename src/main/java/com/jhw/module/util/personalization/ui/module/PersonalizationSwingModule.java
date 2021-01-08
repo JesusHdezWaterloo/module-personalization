@@ -1,10 +1,10 @@
 package com.jhw.module.util.personalization.ui.module;
 
-import com.clean.core.app.services.ExceptionHandler;
-import com.clean.swing.app.DefaultAbstractSwingMainModule;
 import com.jhw.module.util.personalization.core.module.PersonalizationCoreModule;
 import com.jhw.module.util.personalization.core.usecase_def.PersonalizableUseCase;
 import com.jhw.module.util.personalization.services.PersonalizationHandler;
+import com.root101.clean.core.app.services.ExceptionHandler;
+import com.root101.clean.swing.app.DefaultAbstractSwingMainModule;
 
 public class PersonalizationSwingModule extends DefaultAbstractSwingMainModule {
 
