@@ -1,0 +1,19 @@
+package com.root101.module.util.personalization.repo.module;
+
+import com.root101.module.util.personalization.repo.repo_impl.PersonalizationRepoImpl;
+import com.google.inject.AbstractModule;
+import com.root101.module.util.personalization.core.repo_def.PersonalizationRepo;
+
+/**
+ * Configuracion del injection del modulo de licencia-repo.
+ *
+ * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
+ */
+public class PersonalizationRepoInjectionConfig extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        bind(PersonalizationRepo.class).to(PersonalizationRepoImpl.class);
+    }
+
+}
