@@ -19,7 +19,7 @@ package com.root101.module.util.personalization.core.usecase_impl;
 import com.root101.clean.core.app.usecase.DefaultReadWriteUseCase;
 import com.root101.module.util.personalization.core.domain.Personalization;
 import com.root101.module.util.personalization.core.module.PersonalizationCoreModule;
-import javax.inject.Inject;
+
 import com.root101.module.util.personalization.core.repo_def.PersonalizationRepo;
 import com.root101.module.util.personalization.core.usecase_def.PersonalizableUseCase;
 import com.root101.module.util.personalization.services.PersonalizationHandler;
@@ -39,7 +39,6 @@ public class PersonalizationUseCaseImpl extends DefaultReadWriteUseCase<Personal
     /**
      * Constructor por defecto, usado par injectar.
      */
-    @Inject
     public PersonalizationUseCaseImpl() {
         super.setRepo(repo);
     }
