@@ -21,7 +21,7 @@ import com.root101.clean.core.app.services.NotificationsGeneralType;
 import com.root101.clean.core.domain.services.ResourceHandler;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.root101.module.util.personalization.core.domain.Personalization;
-import javax.inject.Inject;
+
 import com.root101.repo.json.JACKSONRepoGeneral;
 import com.root101.module.util.personalization.core.repo_def.PersonalizationRepo;
 import com.root101.module.util.personalization.repo.jackson.color.ColorJsonDeserializer;
@@ -42,7 +42,6 @@ public class PersonalizationRepoImpl extends JACKSONRepoGeneral<Personalization>
     /**
      * Constructor por defecto, usado para injectar.
      */
-    @Inject
     public PersonalizationRepoImpl() {
         super("personalization.json", Personalization.class);
 

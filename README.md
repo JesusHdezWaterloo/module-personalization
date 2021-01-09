@@ -1,6 +1,6 @@
 ## Modulo Util Personalizacion
 
-Módulo para para almecenar todas las configuraciones visuales del UI, como colores, flags, iconos y demás
+Módulo para almecenar todas las configuraciones visuales del UI, como colores, flags, iconos y demás
 
 ## Table of Contents
 

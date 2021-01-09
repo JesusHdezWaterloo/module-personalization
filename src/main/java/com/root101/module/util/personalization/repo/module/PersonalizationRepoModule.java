@@ -19,6 +19,10 @@ package com.root101.module.util.personalization.repo.module;
 import com.root101.clean.core.app.modules.DefaultAbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.root101.clean.core.domain.services.ResourceHandler;
+import com.root101.clean.core.exceptions.AlreadyInitModule;
+import com.root101.clean.core.exceptions.NotInitModule;
+import static com.root101.module.util.personalization.services.ResourceKeys.KEY_MODULE_NAME_PERSONALIZATION;
 
 /**
  *
@@ -36,12 +40,15 @@ public class PersonalizationRepoModule extends DefaultAbstractModule {
 
     public static PersonalizationRepoModule getInstance() {
         if (INSTANCE == null) {
-            throw new NullPointerException("El modulo de personalizacion no se ha inicializado");
+            throw new NotInitModule(ResourceHandler.getString(KEY_MODULE_NAME_PERSONALIZATION));
         }
         return INSTANCE;
     }
 
     public static PersonalizationRepoModule init() {
+        if (INSTANCE != null) {
+            throw new AlreadyInitModule(ResourceHandler.getString(KEY_MODULE_NAME_PERSONALIZATION));
+        }
         INSTANCE = new PersonalizationRepoModule();
         return getInstance();
     }
